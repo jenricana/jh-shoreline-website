@@ -10,7 +10,11 @@ const services = [
   "Gutter Cleaning",
   "Solar Panel Cleaning",
   "Windows Cleaning",
-  "Windows Cleaning (High Reach)"
+  "High Reach Windows",
+  "End of Lease Cleaning",
+  "Carpet Cleaning",
+  "Oven Cleaning",
+  "High Pressure Cleaning"
 ];
 
 export function ContactSection() {
@@ -18,7 +22,8 @@ export function ContactSection() {
     name: "",
     email: "",
     phone: "",
-    squareFootage: "",
+    address: "",
+    buildingType: "",
     service: "",
     agreed: false,
   });
@@ -40,14 +45,15 @@ export function ContactSection() {
           fullName: formData.name,
           email: formData.email,
           phone: formData.phone,
-          squareFootage: formData.squareFootage,
+          address: formData.address,
+          buildingType: formData.buildingType,
           service: formData.service,
         }),
       });
 
       if (response.ok) {
         setSubmitStatus('success');
-        setFormData({ name: "", email: "", phone: "", squareFootage: "", service: "", agreed: false });
+        setFormData({ name: "", email: "", phone: "", address: "", buildingType: "", service: "", agreed: false });
         // Reset success message after 5 seconds
         setTimeout(() => setSubmitStatus('idle'), 5000);
       } else {
@@ -71,7 +77,7 @@ export function ContactSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/Photos/car_new.png"
+          src="/Photos/car_new_2.png"
           alt="Contact Background"
           fill
           className="object-cover"
@@ -87,35 +93,28 @@ export function ContactSection() {
             {/* Contact Form */}
             <div className="bg-white rounded-2xl shadow-2xl p-8 relative">
               {/* Success Message */}
-              {submitStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
-                  <div className="flex items-center">
-                    <svg className="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              {submitStatus === 'success' ? (
+                <div className="text-center py-12 animate-in fade-in slide-in-from-top-4 duration-500">
+                  <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                     </svg>
-                    <div>
-                      <p className="font-semibold text-green-800">Quote Request Sent!</p>
-                      <p className="text-sm text-green-700">We'll contact you within 24 hours.</p>
-                    </div>
                   </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
+                  <p className="text-sm text-gray-600">Your request has been sent. We will contact you shortly.</p>
                 </div>
-              )}
-
-              {/* Error Message */}
-              {submitStatus === 'error' && (
-                <div className="mb-6 p-4 bg-red-50 border-l-4 border-red-500 rounded-r-lg">
-                  <div className="flex items-center">
-                    <svg className="w-6 h-6 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : submitStatus === 'error' ? (
+                <div className="text-center py-12 animate-in fade-in slide-in-from-top-4 duration-500">
+                  <div className="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
                     </svg>
-                    <div>
-                      <p className="font-semibold text-red-800">Failed to Send</p>
-                      <p className="text-sm text-red-700">{errorMessage}</p>
-                    </div>
                   </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Failed to Send</h3>
+                  <p className="text-sm text-gray-600">{errorMessage}</p>
                 </div>
-              )}
-
+              ) : (
+              <>
               {/* Corner decorations */}
               <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-[#0047AB]"></div>
               <div className="absolute top-4 right-4 w-8 h-8 border-r-2 border-t-2 border-[#0047AB]"></div>
@@ -219,7 +218,7 @@ export function ContactSection() {
                   </div>
                   <div>
                     <label className="block text-sm text-gray-600 mb-1">
-                      Property Size
+                      Property Type
                     </label>
                     <div className="relative">
                       <Image
@@ -230,18 +229,43 @@ export function ContactSection() {
                         className="absolute inset-0 w-full h-full object-cover rounded-lg pointer-events-none"
                       />
                       <select
-                        value={formData.squareFootage}
+                        value={formData.buildingType}
                         onChange={(e) =>
-                          setFormData({ ...formData, squareFootage: e.target.value })
+                          setFormData({ ...formData, buildingType: e.target.value })
                         }
                         className="relative w-full h-10 px-3 bg-transparent border-none rounded-lg text-sm focus:outline-none focus:ring-0"
                       >
-                        <option value="">e.g 120 sqm</option>
-                        <option value="small">Small (under 100 sqm)</option>
-                        <option value="medium">Medium (100-200 sqm)</option>
-                        <option value="large">Large (200+ sqm)</option>
+                        <option value="" className="text-gray-900 bg-white">Select building type</option>
+                        <option value="single-storey" className="text-gray-900 bg-white">Single-Storey</option>
+                        <option value="double-storey" className="text-gray-900 bg-white">Double-Storey</option>
+                        <option value="multi-level" className="text-gray-900 bg-white">Multi-Level</option>
                       </select>
                     </div>
+                  </div>
+                </div>
+
+                <div>
+                  <label className="block text-sm text-gray-600 mb-1">
+                    Your Address*
+                  </label>
+                  <div className="relative">
+                    <Image
+                      src="/contact_forms.png"
+                      alt=""
+                      width={300}
+                      height={50}
+                      className="absolute inset-0 w-full h-full object-cover rounded-lg"
+                    />
+                    <Input
+                      type="text"
+                      placeholder="123 Main Street, Rockingham WA 6168"
+                      value={formData.address}
+                      onChange={(e) =>
+                        setFormData({ ...formData, address: e.target.value })
+                      }
+                      className="relative bg-transparent border-none focus:outline-none focus:ring-0"
+                      required
+                    />
                   </div>
                 </div>
 
@@ -265,9 +289,9 @@ export function ContactSection() {
                       className="relative w-full h-10 px-3 bg-transparent border-none rounded-lg text-sm focus:outline-none focus:ring-0"
                       required
                     >
-                      <option value="">Choose your services</option>
+                      <option value="" className="text-gray-900 bg-white">Choose your services</option>
                       {services.map((service) => (
-                        <option key={service} value={service}>{service}</option>
+                        <option key={service} value={service} className="text-gray-900 bg-white">{service}</option>
                       ))}
                     </select>
                   </div>
@@ -303,6 +327,8 @@ export function ContactSection() {
                   />
                 </button>
               </form>
+              </>
+              )}
             </div>
 
             {/* Right side content - optional messaging */}
@@ -316,27 +342,21 @@ export function ContactSection() {
                 </p>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-[#FFC107] rounded-full flex items-center justify-center">
-                      <svg className="w-6 h-6 text-[#0a1628]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
+                    <svg className="w-8 h-8 text-[#FFC107]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
                     <span className="text-white font-medium">Professional Service</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-[#FFC107] rounded-full flex items-center justify-center">
-                      <svg className="w-6 h-6 text-[#0a1628]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
+                    <svg className="w-8 h-8 text-[#FFC107]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
                     <span className="text-white font-medium">Fast Response Time</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-[#FFC107] rounded-full flex items-center justify-center">
-                      <svg className="w-6 h-6 text-[#0a1628]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
+                    <svg className="w-8 h-8 text-[#FFC107]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
                     <span className="text-white font-medium">Competitive Pricing</span>
                   </div>
                 </div>

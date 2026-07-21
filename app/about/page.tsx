@@ -19,9 +19,8 @@ const features = [
 
 const stats = [
   { number: "5+", label: "Years Experience" },
-  { number: "500+", label: "Happy Clients" },
-  { number: "1000+", label: "Projects Completed" },
-  { number: "100%", label: "Satisfaction Rate" }
+  { number: "1300+", label: "Clients in 5 Years" },
+  { number: "100%", label: "Satisfaction Promised" }
 ];
 
 const values = [
@@ -51,7 +50,7 @@ export default function AboutPage() {
       <section className="relative h-[250px] bg-[#0a1628] pt-28">
         <div className="absolute inset-0">
           <Image
-            src="/Photos/car_new.png"
+            src="/Photos/car_new_2.png"
             alt="About Banner"
             fill
             className="object-cover opacity-40"
@@ -86,18 +85,19 @@ export default function AboutPage() {
                 {/* Main Image */}
                 <div className="relative ml-8 rounded-2xl overflow-hidden shadow-xl">
                   <Image
-                    src="/Photos/about_photo.png"
+                    src="/Photos/about_page_3.png"
                     alt="Professional Cleaning Services"
                     width={500}
-                    height={400}
-                    className="object-cover h-[400px] w-full"
+                    height={550}
+                    className="object-contain w-full"
+                    unoptimized
                   />
                 </div>
 
                 {/* Secondary Image */}
                 <div className="absolute -bottom-8 right-0 w-48 h-36 rounded-xl overflow-hidden shadow-xl border-4 border-white">
                   <Image
-                    src="/Photos/works.jpg"
+                    src="/Photos/about_photo_2.png"
                     alt="Quality Work"
                     width={192}
                     height={144}
@@ -166,15 +166,24 @@ export default function AboutPage() {
       </section>
 
       {/* Stats Section */}
-      <section className="relative py-20 bg-gradient-to-br from-[#0a1628] via-[#0047AB] to-[#1a2d4d] overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-0 left-0 w-96 h-96 bg-[#FFC107]/10 rounded-full blur-3xl"></div>
-        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#0047AB]/20 rounded-full blur-3xl"></div>
-        <div className="absolute top-10 right-1/4 text-white/5 text-8xl">✦</div>
-        <div className="absolute bottom-10 left-1/4 text-white/5 text-6xl">○</div>
+      <section className="relative py-20 overflow-hidden">
+        {/* Animated gradient background */}
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#0047AB] to-[#1a2d4d]"></div>
+        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-50"></div>
+        
+        {/* Animated floating elements */}
+        <div className="absolute top-0 left-0 w-96 h-96 bg-[#FFC107]/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#0047AB]/30 rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-white/5 rounded-full blur-2xl animate-pulse" style={{animationDelay: '2s'}}></div>
+        
+        {/* Decorative shapes */}
+        <div className="absolute top-10 right-1/4 text-[#FFC107]/20 text-8xl animate-bounce" style={{animationDuration: '3s'}}>✦</div>
+        <div className="absolute bottom-10 left-1/4 text-white/10 text-6xl animate-bounce" style={{animationDuration: '4s', animationDelay: '1s'}}>○</div>
+        <div className="absolute top-1/3 right-10 text-[#FFC107]/10 text-4xl animate-spin" style={{animationDuration: '10s'}}>◇</div>
+        <div className="absolute bottom-1/3 left-10 text-white/10 text-5xl animate-pulse">△</div>
         
         <div className="container mx-auto px-4 relative z-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {stats.map((stat) => (
               <div key={stat.label} className="text-center group">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 hover:bg-white/20 transition-all duration-300 hover:scale-105 border border-white/20">
@@ -199,7 +208,7 @@ export default function AboutPage() {
               <div className="h-px bg-gray-300 w-12"></div>
             </div>
             <h2 className="text-3xl md:text-4xl font-bold text-[#0a1628]">
-              Our Core <span className="text-[#d4a853]">Values</span>
+              Our Core <span className="text-[#FFC107]">Values</span>
             </h2>
           </div>
 
@@ -209,8 +218,8 @@ export default function AboutPage() {
                 key={value.title} 
                 className="bg-white rounded-2xl shadow-xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border-t-4 border-[#4a90c2]"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-[#4a90c2] to-[#0a1628] rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                  <Image src={value.icon} alt={value.title} width={32} height={32} />
+                <div className="flex items-center justify-center mx-auto mb-6">
+                  <Image src={value.icon} alt={value.title} width={64} height={64} />
                 </div>
                 <h3 className="text-xl font-bold text-[#0a1628] mb-3">{value.title}</h3>
                 <p className="text-gray-600 text-sm leading-relaxed">{value.description}</p>
@@ -257,7 +266,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Photos/solar_pannel_cleaning.png"
+                  src="/Photos/solar_pannel_cleaning_2 (2).png"
                   alt="Our Mission"
                   width={600}
                   height={400}

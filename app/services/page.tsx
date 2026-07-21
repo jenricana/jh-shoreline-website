@@ -5,14 +5,14 @@ import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { Droplets, Sun, Sparkles, Building2 } from "lucide-react";
+import { Droplets, Sun, Sparkles, Building2, Home, Brush, Flame, Waves } from "lucide-react";
 
 const services = [
   {
     id: "gutter-cleaning",
     title: "Gutter Cleaning",
     description: "Professional gutter cleaning to prevent water damage and maintain your property. We remove leaves, debris, and blockages to ensure proper drainage.",
-    image: "/Photos/gutter_cleaning (2).png",
+    image: "/Photos/gutter_cleaning.png",
     icon: Droplets,
     features: ["Debris removal", "Downpipe clearing", "Gutter inspection", "Before/after photos"]
   },
@@ -20,7 +20,7 @@ const services = [
     id: "solar-panel-cleaning",
     title: "Solar Panel Cleaning",
     description: "Maximize your solar panel efficiency with our professional cleaning service. Dirty panels can lose up to 25% of their energy output.",
-    image: "/Photos/solar_pannel_cleaning.png",
+    image: "/Photos/solar_pannel_cleaning_2 (2).png",
     icon: Sun,
     features: ["Increased efficiency", "Soft wash technique", "No harsh chemicals", "Regular maintenance plans"]
   },
@@ -28,7 +28,7 @@ const services = [
     id: "windows-cleaning",
     title: "Windows Cleaning",
     description: "Professional window cleaning for crystal-clear, streak-free results. Perfect for ground floor and first floor residential properties.",
-    image: "/Photos/windows_cleaning_@.png",
+    image: "/Photos/windows_cleaning_5.png",
     icon: Sparkles,
     features: ["Ground floor windows", "First floor access", "Streak-free finish", "Inside & outside"]
   },
@@ -39,6 +39,38 @@ const services = [
     image: "/Photos/high_reach_windows_3.png",
     icon: Building2,
     features: ["Multi-story buildings", "Commercial properties", "Specialized equipment", "Safety certified"]
+  },
+  {
+    id: "end-of-lease-cleaning",
+    title: "End of Lease Cleaning",
+    description: "Comprehensive bond cleaning service to ensure you get your full deposit back. We cover every room and detail required by property managers.",
+    image: "/Photos/end_of_lease cleaning.png",
+    icon: Home,
+    features: ["Full property clean", "Bond back guarantee", "Checklist provided", "All rooms included"]
+  },
+  {
+    id: "carpet-cleaning",
+    title: "Carpet Cleaning",
+    description: "Deep carpet cleaning to remove stains, odors, and allergens. Our professional equipment restores your carpets to like-new condition.",
+    image: "/Photos/carpet_cleaning_2.png",
+    icon: Brush,
+    features: ["Deep extraction", "Stain removal", "Odor elimination", "Quick drying"]
+  },
+  {
+    id: "oven-cleaning",
+    title: "Oven Cleaning",
+    description: "Professional oven cleaning to remove grease, grime, and burnt-on food. We use safe, eco-friendly products for a sparkling clean oven.",
+    image: "/Photos/oven_cleaning.png",
+    icon: Flame,
+    features: ["Deep degreasing", "Eco-friendly products", "Racks included", "Same day service"]
+  },
+  {
+    id: "high-pressure-cleaning",
+    title: "High Pressure Cleaning",
+    description: "Powerful pressure washing to restore driveways, patios, decks, and exterior surfaces. Remove dirt, grime, mold, and stains.",
+    image: "/Photos/high_pressure_3.png",
+    icon: Waves,
+    features: ["Driveways & paths", "Patios & decks", "Exterior walls", "Oil stain removal"]
   }
 ];
 
@@ -51,7 +83,7 @@ export default function ServicesPage() {
       <section className="relative h-[250px] bg-[#0a1628] pt-28">
         <div className="absolute inset-0">
           <Image
-            src="/Photos/professional cleaning.png"
+            src="/Photos/car_new_2.png"
             alt="Services Banner"
             fill
             className="object-cover opacity-30"
@@ -111,9 +143,7 @@ export default function ServicesPage() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628]/60 to-transparent"></div>
                     <div className="absolute bottom-4 left-4">
-                      <div className="w-12 h-12 bg-[#0047AB] rounded-xl flex items-center justify-center shadow-lg">
-                        <IconComponent className="w-6 h-6 text-white" />
-                      </div>
+                      <IconComponent className="w-12 h-12 text-white" />
                     </div>
                   </div>
 
@@ -162,32 +192,32 @@ export default function ServicesPage() {
 
           <div className="grid md:grid-cols-4 gap-6 max-w-5xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-colors">
-              <div className="w-16 h-16 bg-[#0047AB] rounded-full flex items-center justify-center mx-auto mb-4">
-                <Image src="/106.png" alt="Insured" width={32} height={32} />
+              <div className="flex items-center justify-center mx-auto mb-4">
+                <Image src="/106.png" alt="Insured" width={64} height={64} />
               </div>
               <h3 className="text-white font-semibold mb-2">Fully Insured</h3>
               <p className="text-white/60 text-sm">Complete peace of mind with full insurance coverage</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-colors">
-              <div className="w-16 h-16 bg-[#FFC107] rounded-full flex items-center justify-center mx-auto mb-4">
-                <Image src="/107.png" alt="Eco" width={32} height={32} />
+              <div className="flex items-center justify-center mx-auto mb-4">
+                <Image src="/107.png" alt="Eco" width={64} height={64} />
               </div>
               <h3 className="text-white font-semibold mb-2">Eco-Friendly</h3>
               <p className="text-white/60 text-sm">Safe, environmentally conscious cleaning solutions</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-colors">
-              <div className="w-16 h-16 bg-[#0047AB] rounded-full flex items-center justify-center mx-auto mb-4">
-                <Image src="/108.png" alt="Professional" width={32} height={32} />
+              <div className="flex items-center justify-center mx-auto mb-4">
+                <Image src="/108.png" alt="Professional" width={64} height={64} />
               </div>
               <h3 className="text-white font-semibold mb-2">Professional</h3>
               <p className="text-white/60 text-sm">Trained experts with professional equipment</p>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover:bg-white/20 transition-colors">
-              <div className="w-16 h-16 bg-[#FFC107] rounded-full flex items-center justify-center mx-auto mb-4">
-                <Image src="/everything.png" alt="Guaranteed" width={32} height={32} />
+              <div className="flex items-center justify-center mx-auto mb-4">
+                <Image src="/everything.png" alt="Guaranteed" width={64} height={64} />
               </div>
               <h3 className="text-white font-semibold mb-2">Guaranteed</h3>
               <p className="text-white/60 text-sm">100% satisfaction guaranteed on every job</p>

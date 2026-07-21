@@ -8,7 +8,7 @@ const servicesDetail = [
     id: "gutter",
     slug: "gutter-cleaning",
     title: "GUTTER CLEANING",
-    image: "/Photos/gutter_cleaning (2).png",
+    image: "/Photos/gutter_cleaning.png",
     paragraphs: [
       "When your gutters or downpipes are clogged, water doesn't drain as it should. Instead, it overflows and seeps into the ceiling, foundations, walls, and window frames, leading to structural damage to your property. In Rockingham's rainy winters, blocked gutters can cause serious water damage to your home.",
       "Gutter cleaning extends the life of your gutters and downpipes, reduces potential for structural water damage, and eliminates breeding areas for insects, especially mosquitoes. Regular gutter cleaning services are essential for maintaining the safety and integrity of your home."
@@ -18,7 +18,7 @@ const servicesDetail = [
     id: "solar",
     slug: "solar-panel-cleaning",
     title: "SOLAR PANELS",
-    image: "/Photos/solar_pannel_cleaning.png",
+    image: "/Photos/solar_pannel_cleaning_2 (2).png",
     paragraphs: [
       "WA has plenty of sunny days to produce solar power, but this is wasted if your solar panels aren't operating at their maximum potential. When dirt and grime build up on your solar panels, they can block the sun's rays and prevent the panels from absorbing energy efficiently.",
       "We help your panels perform as they were designed to by thoroughly, but gently, cleaning each panel with expert equipment and a pure water system. This means we don't use any soaps, chemicals or detergents — just a gentle formula specifically designed for cleaning without causing damage to the panels."
@@ -28,7 +28,7 @@ const servicesDetail = [
     id: "windows",
     slug: "windows-cleaning",
     title: "WINDOWS CLEANING",
-    image: "/Photos/windows_cleaning_@.png",
+    image: "/Photos/windows_cleaning_5.png",
     paragraphs: [
       "Clean windows transform the appearance of your property and allow natural light to brighten your space. Perfect for ground floor and first floor residential properties.",
       "Our professional window cleaning service delivers crystal-clear, streak-free results. We use specialized equipment and eco-friendly cleaning solutions to ensure your windows sparkle, enhancing your property's curb appeal and allowing maximum light into your space."
@@ -42,6 +42,46 @@ const servicesDetail = [
     paragraphs: [
       "Multi-story buildings and hard-to-reach windows require specialized equipment and expertise to clean safely and effectively. Our high-reach window cleaning service handles windows that standard methods cannot reach.",
       "Using professional-grade extension poles and safety equipment, we deliver the same crystal-clear, streak-free results for upper floors and difficult access areas. Perfect for commercial buildings, apartments, and multi-story residential properties."
+    ]
+  },
+  {
+    id: "end-of-lease",
+    slug: "end-of-lease-cleaning",
+    title: "END OF LEASE CLEANING",
+    image: "/Photos/end_of_lease cleaning.png",
+    paragraphs: [
+      "Moving out? Our comprehensive end of lease cleaning service ensures your rental property is spotless and ready for inspection. We follow real estate and property manager checklists to guarantee you get your full bond back.",
+      "Our thorough cleaning covers every room, including kitchens, bathrooms, bedrooms, living areas, and all fixtures and fittings. We offer a bond back guarantee – if there are any issues, we'll come back and fix them at no extra cost."
+    ]
+  },
+  {
+    id: "carpet",
+    slug: "carpet-cleaning",
+    title: "CARPET CLEANING",
+    image: "/Photos/carpet_cleaning_2.png",
+    paragraphs: [
+      "Over time, carpets accumulate dirt, dust, allergens, and stains that regular vacuuming can't remove. Our professional carpet cleaning service uses hot water extraction to deep clean your carpets and restore them to like-new condition.",
+      "We remove stubborn stains, eliminate odors, and extract allergens that can affect your family's health. Our eco-friendly cleaning solutions are safe for children and pets while being tough on dirt and grime."
+    ]
+  },
+  {
+    id: "oven",
+    slug: "oven-cleaning",
+    title: "OVEN CLEANING",
+    image: "/Photos/oven_cleaning.png",
+    paragraphs: [
+      "A dirty oven isn't just unsightly – it can affect the taste of your food, create smoke and odors, and even become a fire hazard. Our professional oven cleaning service removes all grease, grime, and burnt-on food to restore your oven to sparkling condition.",
+      "We use safe, eco-friendly cleaning products that are tough on grease but gentle on your oven's surfaces. Our thorough cleaning includes the oven interior, door glass, racks, trays, and all removable parts."
+    ]
+  },
+  {
+    id: "high-pressure",
+    slug: "high-pressure-cleaning",
+    title: "HIGH PRESSURE CLEANING",
+    image: "/Photos/high_pressure_3.png",
+    paragraphs: [
+      "Over time, outdoor surfaces accumulate dirt, grime, mold, algae, and stains that regular cleaning can't remove. Our professional high pressure cleaning service restores driveways, patios, decks, and exterior walls to their original condition.",
+      "Using commercial-grade pressure washing equipment, we safely and effectively remove years of buildup without damaging your surfaces. Transform your outdoor areas and boost your property's curb appeal."
     ]
   }
 ];

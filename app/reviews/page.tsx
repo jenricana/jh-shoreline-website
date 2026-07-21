@@ -93,7 +93,7 @@ export default function ReviewsPage() {
       <section className="relative h-[250px] bg-[#0a1628] pt-28">
         <div className="absolute inset-0">
           <Image
-            src="/Photos/car_new.png"
+            src="/Photos/car_new_2.png"
             alt="Reviews Banner"
             fill
             className="object-cover opacity-40"

@@ -10,7 +10,7 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/Photos/car_new.png"
+          src="/Photos/car_new_2.png"
           alt="Shoreline view"
           fill
           className="object-cover"

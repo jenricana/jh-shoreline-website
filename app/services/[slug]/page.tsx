@@ -1,6 +1,7 @@
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { ContactSection } from "@/components/sections/contact-section";
+import { CompactQuoteForm } from "@/components/ui/compact-quote-form";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -18,7 +19,7 @@ const servicesData: Record<string, {
   "gutter-cleaning": {
     title: "Gutter Cleaning",
     subtitle: "Professional Gutter Cleaning Services in Rockingham",
-    image: "/Photos/gutter_cleaning (2).png",
+    image: "/Photos/gutter_cleaning.png",
     description: [
       "When your gutters or downpipes are clogged, water doesn't drain as it should. Instead, it overflows and seeps into the ceiling, foundations, walls, and window frames, leading to structural damage to your property. In Rockingham's rainy winters, blocked gutters can cause serious water damage to your home.",
       "Gutter cleaning extends the life of your gutters and downpipes, reduces potential for structural water damage, and eliminates breeding areas for insects, especially mosquitoes. Regular gutter cleaning services are essential for maintaining the safety and integrity of your home.",
@@ -43,7 +44,7 @@ const servicesData: Record<string, {
   "solar-panel-cleaning": {
     title: "Solar Panel Cleaning",
     subtitle: "Maximize Your Solar Energy Efficiency",
-    image: "/Photos/solar_pannel_cleaning.png",
+    image: "/Photos/solar_pannel_cleaning_2 (2).png",
     description: [
       "WA has plenty of sunny days to produce solar power, but this is wasted if your solar panels aren't operating at their maximum potential. When dirt and grime build up on your solar panels, they can block the sun's rays and prevent the panels from absorbing energy efficiently.",
       "Studies show that dirty solar panels can lose up to 25% of their efficiency. Regular cleaning ensures you're getting the maximum return on your solar investment and reducing your electricity bills.",
@@ -68,7 +69,7 @@ const servicesData: Record<string, {
   "windows-cleaning": {
     title: "Windows Cleaning",
     subtitle: "Crystal Clear Windows for Ground & First Floor",
-    image: "/Photos/windows_cleaning_@.png",
+    image: "/Photos/windows_cleaning_5.png",
     description: [
       "Clean windows transform the appearance of your property and allow natural light to brighten your space. Perfect for ground floor and first floor residential properties.",
       "Our professional window cleaning service delivers crystal-clear, streak-free results. We use specialized equipment and eco-friendly cleaning solutions to ensure your windows sparkle.",
@@ -113,6 +114,110 @@ const servicesData: Record<string, {
       "Clean windows using water-fed pole system",
       "Apply eco-friendly cleaning solutions",
       "Final quality inspection and safety check"
+    ]
+  },
+  "end-of-lease-cleaning": {
+    title: "End of Lease Cleaning",
+    subtitle: "Get Your Full Bond Back Guaranteed",
+    image: "/Photos/end_of_lease cleaning.png",
+    description: [
+      "Moving out? Our comprehensive end of lease cleaning service ensures your rental property is spotless and ready for inspection. We follow real estate and property manager checklists to guarantee you get your full bond back.",
+      "Our thorough cleaning covers every room, including kitchens, bathrooms, bedrooms, living areas, and all fixtures and fittings. We pay attention to the details that property managers look for during final inspections.",
+      "With JH Shoreline's end of lease cleaning, you can focus on your move while we handle the deep cleaning. We offer a bond back guarantee – if there are any issues with the clean, we'll come back and fix them at no extra cost."
+    ],
+    benefits: [
+      "Bond back guarantee",
+      "Real estate checklist followed",
+      "All rooms thoroughly cleaned",
+      "Oven and appliances included",
+      "Windows cleaned inside",
+      "Carpets vacuumed throughout"
+    ],
+    process: [
+      "Initial walkthrough and assessment",
+      "Kitchen deep clean including oven",
+      "Bathroom sanitization and descaling",
+      "All rooms dusted and vacuumed",
+      "Windows and fixtures cleaned",
+      "Final inspection walkthrough"
+    ]
+  },
+  "carpet-cleaning": {
+    title: "Carpet Cleaning",
+    subtitle: "Professional Deep Carpet Cleaning",
+    image: "/Photos/carpet_cleaning_2.png",
+    description: [
+      "Over time, carpets accumulate dirt, dust, allergens, and stains that regular vacuuming can't remove. Our professional carpet cleaning service uses hot water extraction to deep clean your carpets and restore them to like-new condition.",
+      "We remove stubborn stains, eliminate odors, and extract allergens that can affect your family's health. Our eco-friendly cleaning solutions are safe for children and pets while being tough on dirt and grime.",
+      "Regular professional carpet cleaning extends the life of your carpets, improves indoor air quality, and keeps your home looking fresh and clean. We service residential and commercial properties throughout Rockingham."
+    ],
+    benefits: [
+      "Deep stain removal",
+      "Allergen extraction",
+      "Odor elimination",
+      "Extends carpet life",
+      "Quick drying time",
+      "Safe for kids and pets"
+    ],
+    process: [
+      "Pre-inspection and stain identification",
+      "Pre-treatment of high-traffic areas",
+      "Hot water extraction cleaning",
+      "Stain treatment and spot cleaning",
+      "Deodorizing treatment",
+      "Speed drying process"
+    ]
+  },
+  "oven-cleaning": {
+    title: "Oven Cleaning",
+    subtitle: "Professional Oven Deep Cleaning",
+    image: "/Photos/oven_cleaning.png",
+    description: [
+      "A dirty oven isn't just unsightly – it can affect the taste of your food, create smoke and odors, and even become a fire hazard. Our professional oven cleaning service removes all grease, grime, and burnt-on food to restore your oven to sparkling condition.",
+      "We use safe, eco-friendly cleaning products that are tough on grease but gentle on your oven's surfaces. Our thorough cleaning includes the oven interior, door glass, racks, trays, and all removable parts.",
+      "Whether you need a one-off deep clean or regular maintenance, our oven cleaning service will have your oven looking and performing like new. Perfect for end of lease cleaning or just keeping your kitchen in top shape."
+    ],
+    benefits: [
+      "Removes burnt-on grease",
+      "Eco-friendly products",
+      "Improves cooking performance",
+      "Eliminates smoke and odors",
+      "Racks and trays included",
+      "Same day service available"
+    ],
+    process: [
+      "Remove racks and trays",
+      "Apply eco-friendly degreaser",
+      "Deep clean oven interior",
+      "Clean door glass inside and out",
+      "Scrub and clean all racks",
+      "Reassemble and final polish"
+    ]
+  },
+  "high-pressure-cleaning": {
+    title: "High Pressure Cleaning",
+    subtitle: "Professional Pressure Washing Services",
+    image: "/Photos/high_pressure_3.png",
+    description: [
+      "Over time, outdoor surfaces accumulate dirt, grime, mold, algae, and stains that regular cleaning can't remove. Our professional high pressure cleaning service restores driveways, patios, decks, and exterior walls to their original condition.",
+      "Using commercial-grade pressure washing equipment, we safely and effectively remove years of buildup without damaging your surfaces. We adjust pressure levels for different materials to ensure the best results.",
+      "Whether it's oil stains on your driveway, mold on your patio, or dirt on your exterior walls, our high pressure cleaning service will transform your outdoor areas and boost your property's curb appeal."
+    ],
+    benefits: [
+      "Restores original appearance",
+      "Removes mold and algae",
+      "Oil and stain removal",
+      "Increases property value",
+      "Prevents surface damage",
+      "Eco-friendly cleaning"
+    ],
+    process: [
+      "Assess surface type and condition",
+      "Pre-treat stubborn stains",
+      "Adjust pressure for surface type",
+      "Systematic pressure washing",
+      "Detail edges and corners",
+      "Final rinse and inspection"
     ]
   }
 };
@@ -196,7 +301,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                 <div className="space-y-4">
                   {service.process.map((step, index) => (
                     <div key={index} className="flex items-start gap-4">
-                      <div className="w-8 h-8 bg-[#d4a853] rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">
+                      <div className="w-8 h-8 bg-[#FFC107] rounded-full flex items-center justify-center text-[#0a1628] font-bold flex-shrink-0">
                         {index + 1}
                       </div>
                       <p className="text-gray-700 pt-1">{step}</p>
@@ -208,29 +313,8 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
 
             {/* Sidebar */}
             <div className="lg:col-span-1">
-              <div className="bg-[#0a1628] rounded-2xl p-8 text-white sticky top-24">
-                <h3 className="text-xl font-bold mb-4">Get a Free Quote</h3>
-                <p className="text-gray-300 mb-6">
-                  Ready to get started? Contact us today for a free, no-obligation quote.
-                </p>
-                
-                <a href="tel:0413213689" className="block mb-4">
-                  <Button className="w-full bg-[#FFC107] hover:bg-[#ffb300] text-[#0a1628] font-bold py-4 shadow-lg hover:shadow-xl transition-all">
-                    <Phone className="w-5 h-5 mr-2" />
-                    0413 213 689
-                  </Button>
-                </a>
-                
-                <Link href="/#contact">
-                  <Button className="w-full bg-white hover:bg-gray-100 text-[#0a1628] font-bold py-4 shadow-md transition-all">
-                    Request Quote Online
-                  </Button>
-                </Link>
-
-                <div className="mt-8 pt-6 border-t border-white/20">
-                  <p className="text-sm text-gray-400 mb-2">Service Areas</p>
-                  <p className="text-white">Rockingham, Warnbro, Safety Bay & surrounding areas</p>
-                </div>
+              <div className="sticky top-24">
+                <CompactQuoteForm variant="dark" defaultService={service.title} />
               </div>
             </div>
           </div>

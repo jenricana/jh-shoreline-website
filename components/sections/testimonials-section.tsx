@@ -49,7 +49,7 @@ export function TestimonialsSection() {
           <div className="relative">
             <div className="relative rounded-3xl overflow-hidden">
               <Image
-                src="/Photos/JH_photo.png"
+                src="/Photos/JH.png"
                 alt="JH Shoreline Team"
                 width={600}
                 height={700}
@@ -75,6 +75,25 @@ export function TestimonialsSection() {
                 </div>
                 <div className="flex-1 flex items-center">
                   <div className="text-[8px] text-gray-500 font-medium" style={{writingMode: 'vertical-rl', transform: 'rotate(180deg)', textOrientation: 'mixed'}}>From 75+ reviews</div>
+                </div>
+              </div>
+
+              {/* Owner Badge - Bottom Center */}
+              <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-[#0047AB] to-[#0066CC] rounded-full px-8 py-4 shadow-2xl border-2 border-white/30">
+                <div className="flex items-center gap-3">
+                  <div className="bg-white/20 rounded-full p-2">
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                  </div>
+                  <div className="text-left">
+                    <p className="text-white font-bold text-base md:text-lg leading-tight tracking-wide">
+                      Excellence You Can Trust
+                    </p>
+                    <p className="text-white/90 text-xs md:text-sm font-medium mt-0.5">
+                      JH - Founder & Owner
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>

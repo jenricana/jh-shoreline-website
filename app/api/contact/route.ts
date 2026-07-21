@@ -7,7 +7,7 @@ export const runtime = 'nodejs';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { fullName, phone, email, address, state, city, message, service, squareFootage } = body;
+    const { fullName, phone, email, address, buildingType, message, service } = body;
 
     // Create transporter using Gmail SMTP
     const transporter = nodemailer.createTransport({
@@ -33,15 +33,13 @@ export async function POST(request: Request) {
             ${email ? `<p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p>` : ''}
             ${phone ? `<p><strong>Phone:</strong> <a href="tel:${phone}">${phone}</a></p>` : ''}
             ${address ? `<p><strong>Address:</strong> ${address}</p>` : ''}
-            ${state ? `<p><strong>State:</strong> ${state}</p>` : ''}
-            ${city ? `<p><strong>City:</strong> ${city}</p>` : ''}
           </div>
 
-          ${service ? `
+          ${service || buildingType ? `
             <div style="margin: 20px 0;">
               <h3 style="color: #0a1628; margin-bottom: 15px;">Service Details</h3>
-              <p><strong>Service Requested:</strong> ${service}</p>
-              ${squareFootage ? `<p><strong>Property Size:</strong> ${squareFootage}</p>` : ''}
+              ${service ? `<p><strong>Service Requested:</strong> ${service}</p>` : ''}
+              ${buildingType ? `<p><strong>Property Type:</strong> ${buildingType}</p>` : ''}
             </div>
           ` : ''}
 

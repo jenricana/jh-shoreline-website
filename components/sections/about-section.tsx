@@ -2,6 +2,7 @@ import { Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { DecorativeIcons } from "@/components/ui/decorative-icons";
+import { CompactQuoteForm } from "@/components/ui/compact-quote-form";
 
 const features = [
   "Professional Service",
@@ -14,14 +15,14 @@ const features = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="py-20 bg-white relative overflow-hidden">
+    <section id="about" className="py-20 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
       <DecorativeIcons />
       <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
-          {/* Left - Images */}
-          <div className="relative">
-            {/* Main Image */}
-            <div className="relative">
+        <div className="max-w-7xl mx-auto">
+          {/* Top Row - Video & Form Side by Side */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-20">
+            {/* Left - Video Section */}
+            <div className="relative pb-12">
               {/* Years of Experience Badge */}
               <div className="absolute -left-4 top-1/4 z-10 bg-white rounded-lg shadow-xl p-4 text-center">
                 <div className="text-[#FFC107] text-4xl font-bold">5+</div>
@@ -35,24 +36,24 @@ export function AboutSection() {
                 </div>
               </div>
 
-              {/* Main video - Professional Cleaning showcase */}
+              {/* Main video */}
               <div className="relative ml-8 rounded-2xl overflow-hidden shadow-xl">
                 <video
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="object-cover h-[400px] w-full"
+                  className="object-cover h-[500px] w-full"
                 >
                   <source src="/Photos/lv_7625425615440678149_20260604192339.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>
 
-              {/* Secondary image - Quality Work */}
-              <div className="absolute -bottom-8 right-0 w-48 h-32 rounded-xl overflow-hidden shadow-xl border-4 border-white">
+              {/* Secondary image */}
+              <div className="absolute -bottom-12 right-0 w-44 h-36 md:w-48 md:h-32 rounded-xl overflow-hidden shadow-xl border-4 border-white">
                 <Image
-                  src="/Photos/works.jpg"
+                  src="/Photos/about_photo_2.png"
                   alt="Quality Work"
                   width={192}
                   height={128}
@@ -60,10 +61,17 @@ export function AboutSection() {
                 />
               </div>
             </div>
+
+            {/* Right - Quote Form */}
+            <div className="h-[500px] flex items-stretch">
+              <div className="w-full">
+                <CompactQuoteForm variant="light" />
+              </div>
+            </div>
           </div>
 
-          {/* Right Content */}
-          <div className="lg:pl-8">
+          {/* Bottom Section - About Content */}
+          <div className="max-w-4xl mx-auto">
             {/* Tag */}
             <div className="flex items-center gap-2 mb-6">
               <Image
@@ -110,7 +118,7 @@ export function AboutSection() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-4 justify-center">
               <a href="#services">
                 <Button className="bg-[#FFC107] hover:bg-[#ffb300] text-[#0a1628] font-bold px-8 py-3 rounded-lg text-base shadow-lg hover:shadow-xl transition-all">
                   Discover More

@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles, Sun, Wrench, Building2 } from "lucide-react";
+import { Sparkles, Sun, Wrench, Building2, Home, Brush, Flame, Waves } from "lucide-react";
 import Image from "next/image";
 
 const services = [
@@ -10,7 +10,7 @@ const services = [
     icon: Wrench,
     title: "Gutter\nCleaning",
     description: "Remove leaves, debris and blockages to prevent water damage and keep gutters flowing freely.",
-    image: "/Photos/gutter_cleaning (2).png"
+    image: "/Photos/gutter_cleaning.png"
   },
   {
     id: "solar",
@@ -18,7 +18,7 @@ const services = [
     icon: Sun,
     title: "Solar Panel\nCleaning",
     description: "Maximize energy efficiency with professional solar panel cleaning for optimal performance.",
-    image: "/Photos/solar_pannel_cleaning.png"
+    image: "/Photos/solar_pannel_cleaning_2 (2).png"
   },
   {
     id: "windows",
@@ -26,7 +26,7 @@ const services = [
     icon: Sparkles,
     title: "Windows\nCleaning",
     description: "Crystal clear windows for ground floor and first floor residential properties with streak-free results.",
-    image: "/Photos/windows_cleaning_@.png"
+    image: "/Photos/windows_cleaning_5.png"
   },
   {
     id: "windows-high",
@@ -35,6 +35,38 @@ const services = [
     title: "High Reach\nWindows",
     description: "Professional window cleaning for multi-story buildings and hard-to-reach windows with specialized equipment.",
     image: "/Photos/high_reach_windows_3.png"
+  },
+  {
+    id: "end-of-lease",
+    slug: "end-of-lease-cleaning",
+    icon: Home,
+    title: "End of Lease\nCleaning",
+    description: "Comprehensive bond cleaning to ensure you get your full deposit back. We cover every detail.",
+    image: "/Photos/end_of_lease_cleaning_solo.png"
+  },
+  {
+    id: "carpet",
+    slug: "carpet-cleaning",
+    icon: Brush,
+    title: "Carpet\nCleaning",
+    description: "Deep carpet cleaning to remove stains, odors, and allergens. Restore your carpets to like-new condition.",
+    image: "/Photos/carpet_1.png"
+  },
+  {
+    id: "oven",
+    slug: "oven-cleaning",
+    icon: Flame,
+    title: "Oven\nCleaning",
+    description: "Professional oven cleaning to remove grease, grime, and burnt-on food. Safe and eco-friendly products.",
+    image: "/Photos/oven_cleaning_3.png"
+  },
+  {
+    id: "high-pressure",
+    slug: "high-pressure-cleaning",
+    icon: Waves,
+    title: "High Pressure\nCleaning",
+    description: "Powerful pressure washing for driveways, patios, decks, and exterior surfaces. Restore your outdoor areas.",
+    image: "/Photos/high_pressure_1.png"
   }
 ];
 

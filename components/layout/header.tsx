@@ -8,10 +8,12 @@ import Link from "next/link";
 const serviceLinks = [
   { name: "Gutter Cleaning", href: "/services/gutter-cleaning" },
   { name: "Solar Panel Cleaning", href: "/services/solar-panel-cleaning" },
-  { name: "Roof Cleaning", href: "/services/roof-cleaning" },
-  { name: "Pressure Washing", href: "/services/pressure-washing" },
-  { name: "Lawn Mowing", href: "/services/lawn-mowing" },
-  { name: "Car Detailing", href: "/services/car-detailing" },
+  { name: "Windows Cleaning", href: "/services/windows-cleaning" },
+  { name: "High Reach Windows", href: "/services/windows-cleaning-high-reach" },
+  { name: "End of Lease Cleaning", href: "/services/end-of-lease-cleaning" },
+  { name: "Carpet Cleaning", href: "/services/carpet-cleaning" },
+  { name: "Oven Cleaning", href: "/services/oven-cleaning" },
+  { name: "High Pressure Cleaning", href: "/services/high-pressure-cleaning" },
 ];
 
 export function Header() {
@@ -34,9 +36,9 @@ export function Header() {
           <div className="flex items-center justify-between py-2.5 text-xs">
             {/* Contact Info */}
             <div className="flex items-center gap-4 md:gap-6">
-              <a href="mailto:jhshorelineservices@gmail.com" className="flex items-center gap-2 hover:text-[#FFC107] transition-colors">
+              <a href="mailto:jhshorelinecleaningservice@gmail.com" className="flex items-center gap-2 hover:text-[#FFC107] transition-colors">
                 <Mail className="h-3.5 w-3.5" />
-                <span className="hidden sm:inline">jhshorelineservices@gmail.com</span>
+                <span className="hidden sm:inline">jhshorelinecleaningservice@gmail.com</span>
               </a>
               
               <span className="hidden md:block text-white/30">|</span>
@@ -151,6 +153,20 @@ export function Header() {
               >
                 CLIENT REVIEW
               </Link>
+              {/* DVA and NDIS links hidden for now
+              <Link
+                href="/dva"
+                className="text-sm font-medium text-[#0a1628] hover:text-[#0047AB] transition-colors"
+              >
+                DVA
+              </Link>
+              <Link
+                href="/ndis"
+                className="text-sm font-medium text-[#0a1628] hover:text-[#0047AB] transition-colors"
+              >
+                NDIS
+              </Link>
+              */}
               <Link
                 href="/contact"
                 className="text-sm font-medium text-[#0a1628] hover:text-[#0047AB] transition-colors"
@@ -242,6 +258,22 @@ export function Header() {
                 >
                   CLIENT REVIEW
                 </Link>
+                {/* DVA and NDIS links hidden for now
+                <Link
+                  href="/dva"
+                  className="block py-3 text-sm font-medium text-gray-700 hover:text-[#0047AB] border-b border-gray-100"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  DVA
+                </Link>
+                <Link
+                  href="/ndis"
+                  className="block py-3 text-sm font-medium text-gray-700 hover:text-[#0047AB] border-b border-gray-100"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  NDIS
+                </Link>
+                */}
                 <Link
                   href="/contact"
                   className="block py-3 text-sm font-medium text-gray-700 hover:text-[#0047AB] border-b border-gray-100"

@@ -14,8 +14,8 @@ export default function ContactPage() {
     phone: "",
     email: "",
     address: "",
-    state: "",
-    city: "",
+    buildingType: "",
+    service: "",
     message: "",
     agreed: false,
   });
@@ -26,9 +26,12 @@ export default function ContactPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log('CONTACT PAGE: Form submitted! Data:', formData);
     setIsSubmitting(true);
+    setSubmitStatus('idle');
 
     try {
+      console.log('CONTACT PAGE: Sending request to /api/contact...');
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: {
@@ -37,28 +40,33 @@ export default function ContactPage() {
         body: JSON.stringify(formData),
       });
 
+      console.log('CONTACT PAGE: Response status:', response.status);
+      const data = await response.json();
+      console.log('CONTACT PAGE: Response data:', data);
+
       if (response.ok) {
+        console.log('CONTACT PAGE: SUCCESS! Setting status to success');
         setSubmitStatus('success');
         setFormData({
           fullName: "",
           phone: "",
           email: "",
           address: "",
-          state: "",
-          city: "",
+          buildingType: "",
+          service: "",
           message: "",
           agreed: false,
         });
         // Reset success message after 5 seconds
         setTimeout(() => setSubmitStatus('idle'), 5000);
       } else {
-        const data = await response.json();
+        console.log('CONTACT PAGE: ERROR! Response not OK');
         setSubmitStatus('error');
         setErrorMessage(data.message || 'Failed to send message. Please try again.');
         setTimeout(() => setSubmitStatus('idle'), 5000);
       }
     } catch (error) {
-      console.error('Error:', error);
+      console.error('CONTACT PAGE: CATCH ERROR:', error);
       setSubmitStatus('error');
       setErrorMessage('Network error. Please check your connection and try again.');
       setTimeout(() => setSubmitStatus('idle'), 5000);
@@ -75,7 +83,7 @@ export default function ContactPage() {
       <section className="relative h-[250px] bg-[#0a1628] pt-28">
         <div className="absolute inset-0">
           <Image
-            src="/Photos/car_new.png"
+            src="/Photos/car_new_2.png"
             alt="Contact Banner"
             fill
             className="object-cover opacity-40"
@@ -98,22 +106,22 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {/* Email Card */}
             <div className="bg-white rounded-2xl shadow-xl p-8 text-center border-t-4 border-[#0047AB] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
-              <div className="w-16 h-16 bg-[#0047AB] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform">
-                <Image src="/mail.png" alt="Email" width={32} height={32} />
+              <div className="flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <Image src="/mail.png" alt="Email" width={64} height={64} />
               </div>
               <h3 className="text-xl font-bold text-[#0a1628] mb-2">Mail Us 24/7</h3>
               <a 
-                href="mailto:jhshorelineservices@gmail.com" 
+                href="mailto:jhshorelinecleaningservice@gmail.com" 
                 className="text-[#0047AB] hover:text-[#FFC107] font-medium text-sm transition-colors"
               >
-                jhshorelineservices@gmail.com
+                jhshorelinecleaningservice@gmail.com
               </a>
             </div>
 
             {/* Location Card */}
             <div className="bg-white rounded-2xl shadow-xl p-8 text-center border-t-4 border-[#FFC107] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
-              <div className="w-16 h-16 bg-[#FFC107] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform">
-                <Image src="/location.png" alt="Location" width={32} height={32} />
+              <div className="flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <Image src="/location.png" alt="Location" width={64} height={64} />
               </div>
               <h3 className="text-xl font-bold text-[#0a1628] mb-2">Our Location</h3>
               <p className="text-gray-600 text-sm font-medium">
@@ -123,8 +131,8 @@ export default function ContactPage() {
 
             {/* Phone Card */}
             <div className="bg-white rounded-2xl shadow-xl p-8 text-center border-t-4 border-[#0047AB] hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 group">
-              <div className="w-16 h-16 bg-[#0047AB] rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg group-hover:scale-110 transition-transform">
-                <Image src="/call.png" alt="Phone" width={32} height={32} />
+              <div className="flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
+                <Image src="/call.png" alt="Phone" width={64} height={64} />
               </div>
               <h3 className="text-xl font-bold text-[#0a1628] mb-2">Call Us 24/7</h3>
               <a 
@@ -162,8 +170,8 @@ export default function ContactPage() {
               {/* Quick Contact Info */}
               <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-[#FFC107] rounded-full flex items-center justify-center shadow-lg">
-                    <Image src="/call.png" alt="Phone" width={24} height={24} />
+                  <div className="flex items-center justify-center">
+                    <Image src="/call.png" alt="Phone" width={48} height={48} />
                   </div>
                   <div>
                     <p className="text-white/60 text-sm">Call us anytime</p>
@@ -171,12 +179,12 @@ export default function ContactPage() {
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-[#0047AB] rounded-full flex items-center justify-center shadow-lg">
-                    <Image src="/mail.png" alt="Email" width={24} height={24} />
+                  <div className="flex items-center justify-center">
+                    <Image src="/mail.png" alt="Email" width={48} height={48} />
                   </div>
                   <div>
                     <p className="text-white/60 text-sm">Email us</p>
-                    <a href="mailto:jhshorelineservices@gmail.com" className="text-white font-semibold hover:text-[#FFC107] text-sm transition-colors">jhshorelineservices@gmail.com</a>
+                    <a href="mailto:jhshorelinecleaningservice@gmail.com" className="text-white font-semibold hover:text-[#FFC107] text-sm transition-colors">jhshorelinecleaningservice@gmail.com</a>
                   </div>
                 </div>
               </div>
@@ -184,14 +192,11 @@ export default function ContactPage() {
               <div className="mb-8">
                 <h3 className="font-semibold text-white mb-4">Our Social Media</h3>
                 <div className="flex gap-3">
-                  <a href="#" className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFC107] transition-all hover:scale-110">
+                  <a href="https://www.facebook.com/profile.php?id=61587046772707" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFC107] transition-all hover:scale-110">
                     <Image src="/facebook_link.png" alt="Facebook" width={24} height={24} />
                   </a>
-                  <a href="#" className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFC107] transition-all hover:scale-110">
-                    <Image src="/youtube_link.png" alt="YouTube" width={24} height={24} />
-                  </a>
-                  <a href="#" className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFC107] transition-all hover:scale-110">
-                    <Image src="/linked_in_link.png" alt="LinkedIn" width={24} height={24} />
+                  <a href="https://www.instagram.com/jhshorelinecleaningservice/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFC107] transition-all hover:scale-110 group">
+                    <svg className="w-6 h-6 text-white group-hover:text-black" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
                   </a>
                 </div>
               </div>
@@ -200,34 +205,27 @@ export default function ContactPage() {
             {/* Right - Form */}
             <div className="bg-white rounded-2xl shadow-2xl p-8 border-t-4 border-[#FFC107]">
               {/* Success Message */}
-              {submitStatus === 'success' && (
-                <div className="mb-6 p-4 bg-green-50 border-l-4 border-green-500 rounded-r-lg">
-                  <div className="flex items-center">
-                    <svg className="w-6 h-6 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              {submitStatus === 'success' ? (
+                <div className="text-center py-12 animate-in fade-in slide-in-from-top-4 duration-500">
+                  <div className="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                     </svg>
-                    <div>
-                      <p className="font-semibold text-green-800">Message Sent Successfully!</p>
-                      <p className="text-sm text-green-700">We'll contact you within 24 hours.</p>
-                    </div>
                   </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Thank You!</h3>
+                  <p className="text-sm text-gray-600">Your request has been sent. We will contact you shortly.</p>
                 </div>
-              )}
-
-              {/* Error Message */}
-              {submitStatus === 'error' && (
-                <div className="mb-6 p-4 bg-red-50 border-l-4 border-red-500 rounded-r-lg">
-                  <div className="flex items-center">
-                    <svg className="w-6 h-6 text-red-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              ) : submitStatus === 'error' ? (
+                <div className="text-center py-12 animate-in fade-in slide-in-from-top-4 duration-500">
+                  <div className="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
                     </svg>
-                    <div>
-                      <p className="font-semibold text-red-800">Failed to Send</p>
-                      <p className="text-sm text-red-700">{errorMessage}</p>
-                    </div>
                   </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Failed to Send</h3>
+                  <p className="text-sm text-gray-600">{errorMessage}</p>
                 </div>
-              )}
+              ) : (
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid md:grid-cols-2 gap-4">
@@ -248,36 +246,49 @@ export default function ContactPage() {
                   />
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-4">
-                  <Input
-                    placeholder="Email"
-                    type="email"
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="h-12 border-gray-200"
-                    required
-                  />
-                  <Input
-                    placeholder="Enter Address"
-                    value={formData.address}
-                    onChange={(e) => setFormData({ ...formData, address: e.target.value })}
-                    className="h-12 border-gray-200"
-                  />
-                </div>
+                <Input
+                  placeholder="Email"
+                  type="email"
+                  value={formData.email}
+                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  className="h-12 border-gray-200"
+                  required
+                />
+
+                <Input
+                  placeholder="Enter Address"
+                  value={formData.address}
+                  onChange={(e) => setFormData({ ...formData, address: e.target.value })}
+                  className="h-12 border-gray-200"
+                  required
+                />
 
                 <div className="grid md:grid-cols-2 gap-4">
-                  <Input
-                    placeholder="State"
-                    value={formData.state}
-                    onChange={(e) => setFormData({ ...formData, state: e.target.value })}
-                    className="h-12 border-gray-200"
-                  />
-                  <Input
-                    placeholder="City"
-                    value={formData.city}
-                    onChange={(e) => setFormData({ ...formData, city: e.target.value })}
-                    className="h-12 border-gray-200"
-                  />
+                  <select
+                    value={formData.buildingType}
+                    onChange={(e) => setFormData({ ...formData, buildingType: e.target.value })}
+                    className="h-12 px-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#0047AB]"
+                  >
+                    <option value="" className="text-gray-900 bg-white">Select Property Type</option>
+                    <option value="single-storey" className="text-gray-900 bg-white">Single-Storey</option>
+                    <option value="double-storey" className="text-gray-900 bg-white">Double-Storey</option>
+                    <option value="multi-level" className="text-gray-900 bg-white">Multi-Level</option>
+                  </select>
+                  <select
+                    value={formData.service}
+                    onChange={(e) => setFormData({ ...formData, service: e.target.value })}
+                    className="h-12 px-3 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-[#0047AB]"
+                  >
+                    <option value="" className="text-gray-900 bg-white">Select Service</option>
+                    <option value="Gutter Cleaning" className="text-gray-900 bg-white">Gutter Cleaning</option>
+                    <option value="Solar Panel Cleaning" className="text-gray-900 bg-white">Solar Panel Cleaning</option>
+                    <option value="Windows Cleaning" className="text-gray-900 bg-white">Windows Cleaning</option>
+                    <option value="High Reach Windows" className="text-gray-900 bg-white">High Reach Windows</option>
+                    <option value="End of Lease Cleaning" className="text-gray-900 bg-white">End of Lease Cleaning</option>
+                    <option value="Carpet Cleaning" className="text-gray-900 bg-white">Carpet Cleaning</option>
+                    <option value="Oven Cleaning" className="text-gray-900 bg-white">Oven Cleaning</option>
+                    <option value="High Pressure Cleaning" className="text-gray-900 bg-white">High Pressure Cleaning</option>
+                  </select>
                 </div>
 
                 <Textarea
@@ -310,6 +321,7 @@ export default function ContactPage() {
                   {isSubmitting ? 'SENDING...' : 'REQUEST FREE ESTIMATE'}
                 </Button>
               </form>
+              )}
             </div>
           </div>
         </div>
@@ -318,7 +330,7 @@ export default function ContactPage() {
       {/* Map Section */}
       <section className="h-[400px] relative">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d107693.95649788!2d115.69831!3d-32.2833!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2a32a14a4f7e5a5d%3A0x504f0b535df4d30!2sRockingham%20WA%2C%20Australia!5e0!3m2!1sen!2sus!4v1234567890"
+          src="https://www.google.com/maps?q=Rockingham,+WA,+Australia&z=12&output=embed"
           width="100%"
           height="100%"
           style={{ border: 0 }}
