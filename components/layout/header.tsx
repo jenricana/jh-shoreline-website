@@ -79,7 +79,7 @@ export function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
               <Image 
-                src="/Photos/logo_jhshoreline.png" 
+                src="/Photos/jh-shoreline-logo-v2.png" 
                 alt="JH Shoreline Cleaning Services" 
                 width={60} 
                 height={60}

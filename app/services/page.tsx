@@ -80,15 +80,15 @@ export default function ServicesPage() {
       <Header />
       
       {/* Hero Banner */}
-      <section className="relative h-[250px] bg-[#0a1628] pt-28">
+      <section className="relative h-[250px] bg-black pt-28">
         <div className="absolute inset-0">
           <Image
-            src="/Photos/car_new_2.png"
+            src="/Photos/gold-marble-bg.jpg"
             alt="Services Banner"
             fill
-            className="object-cover opacity-30"
+            className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/90 to-[#0a1628]/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
         </div>
         <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">Our Services</h1>

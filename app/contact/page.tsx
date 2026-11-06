@@ -80,15 +80,15 @@ export default function ContactPage() {
       <Header />
       
       {/* Hero Banner */}
-      <section className="relative h-[250px] bg-[#0a1628] pt-28">
+      <section className="relative h-[250px] bg-black pt-28">
         <div className="absolute inset-0">
           <Image
-            src="/Photos/car_new_2.png"
+            src="/Photos/gold-marble-bg.jpg"
             alt="Contact Banner"
             fill
-            className="object-cover opacity-40"
+            className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/80 to-[#0a1628]/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40"></div>
         </div>
         <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-2">Contact</h1>
@@ -192,7 +192,7 @@ export default function ContactPage() {
               <div className="mb-8">
                 <h3 className="font-semibold text-white mb-4">Our Social Media</h3>
                 <div className="flex gap-3">
-                  <a href="https://www.facebook.com/profile.php?id=61587046772707" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFC107] transition-all hover:scale-110">
+                  <a href="https://www.facebook.com/share/1DFRbvRMdZ/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFC107] transition-all hover:scale-110">
                     <Image src="/facebook_link.png" alt="Facebook" width={24} height={24} />
                   </a>
                   <a href="https://www.instagram.com/jhshorelinecleaningservice/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#FFC107] transition-all hover:scale-110 group">

@@ -276,15 +276,15 @@ export default function PricingLandingPage() {
       )}
       
       {/* Hero Section */}
-      <section className="relative min-h-[500px] bg-[#0a1628] pt-28">
+      <section className="relative min-h-[500px] bg-black pt-28">
         <div className="absolute inset-0">
           <Image
-            src="/Photos/car_new_2.png"
+            src="/Photos/gold-marble-bg.jpg"
             alt="JH Shoreline Services"
             fill
-            className="object-cover opacity-30"
+            className="object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/95 via-[#0a1628]/80 to-[#0a1628]/60"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/60 to-black/45"></div>
         </div>
         <div className="relative container mx-auto px-4 py-16 text-center">
           <p className="text-[#FFC107] text-sm font-semibold tracking-widest uppercase mb-4">

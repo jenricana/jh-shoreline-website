@@ -77,14 +77,14 @@ export function ContactSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/Photos/car_new_2.png"
+          src="/Photos/gold-marble-bg.jpg"
           alt="Contact Background"
           fill
           className="object-cover"
           priority
         />
         {/* Dark overlay for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/90 via-[#0a1628]/80 to-[#0a1628]/75"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/60"></div>
       </div>
       
       <div className="container mx-auto px-4 relative z-10">

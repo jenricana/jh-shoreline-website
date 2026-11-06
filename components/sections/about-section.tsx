@@ -45,7 +45,7 @@ export function AboutSection() {
                   playsInline
                   className="object-cover h-[500px] w-full"
                 >
-                  <source src="/Photos/lv_7625425615440678149_20260604192339.mp4" type="video/mp4" />
+                  <source src="/Photos/about-video.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
                 </video>
               </div>

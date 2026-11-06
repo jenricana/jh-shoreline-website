@@ -10,14 +10,14 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/Photos/car_new_2.png"
+          src="/Photos/gold-marble-bg.jpg"
           alt="Shoreline view"
           fill
           className="object-cover"
           priority
         />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/85 via-[#0a1628]/70 to-[#0a1628]/50"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/60 to-black/45"></div>
       </div>
 
       {/* Content */}
@@ -31,7 +31,7 @@ export function HeroSection() {
           {/* Main Heading */}
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Professional{" "}
-            <span className="text-[#0047AB]">Solar Panel, Gutter & Windows Cleaning</span>{" "}
+            <span className="text-[#FFC107]">Solar Panel, Gutter & Windows Cleaning</span>{" "}
             Across The Shoreline.
           </h1>
 

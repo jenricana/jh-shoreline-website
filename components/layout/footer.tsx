@@ -30,7 +30,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Image 
-                src="/Photos/logo_jhshoreline.png" 
+                src="/Photos/jh-shoreline-logo-v2.png" 
                 alt="JH Shoreline" 
                 width={45} 
                 height={45}
@@ -44,7 +44,7 @@ export function Footer() {
             </p>
             {/* Social Icons */}
             <div className="flex gap-3">
-              <a href="https://www.facebook.com/profile.php?id=61587046772707" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-md flex items-center justify-center hover:bg-[#FFC107] transition-colors group">
+              <a href="https://www.facebook.com/share/1DFRbvRMdZ/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-md flex items-center justify-center hover:bg-[#FFC107] transition-colors group">
                 <Image src="/facebook_link.png" alt="Facebook" width={18} height={18} className="group-hover:brightness-0" />
               </a>
               <a href="https://www.instagram.com/jhshorelinecleaningservice/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-md flex items-center justify-center hover:bg-[#FFC107] transition-colors group">
