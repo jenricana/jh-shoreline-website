@@ -281,7 +281,9 @@ export default function ContactPage() {
                   >
                     <option value="" className="text-gray-900 bg-white">Select Service</option>
                     <option value="Gutter Cleaning" className="text-gray-900 bg-white">Gutter Cleaning</option>
+                    <option value="Gutter Guards" className="text-gray-900 bg-white">Gutter Guards</option>
                     <option value="Solar Panel Cleaning" className="text-gray-900 bg-white">Solar Panel Cleaning</option>
+                    <option value="Solar Bird Proofing" className="text-gray-900 bg-white">Solar Bird Proofing</option>
                     <option value="Windows Cleaning" className="text-gray-900 bg-white">Windows Cleaning</option>
                     <option value="High Reach Windows" className="text-gray-900 bg-white">High Reach Windows</option>
                     <option value="End of Lease Cleaning" className="text-gray-900 bg-white">End of Lease Cleaning</option>

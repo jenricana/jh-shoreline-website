@@ -12,6 +12,7 @@ const servicesData: Record<string, {
   title: string;
   subtitle: string;
   image: string;
+  collage?: string;
   description: string[];
   benefits: string[];
   process: string[];
@@ -19,7 +20,7 @@ const servicesData: Record<string, {
   "gutter-cleaning": {
     title: "Gutter Cleaning",
     subtitle: "Professional Gutter Cleaning Services in Rockingham",
-    image: "/Photos/gutter_cleaning.png",
+    image: "/Photos/new_photos/gutter_cleaning_new.png",
     description: [
       "When your gutters or downpipes are clogged, water doesn't drain as it should. Instead, it overflows and seeps into the ceiling, foundations, walls, and window frames, leading to structural damage to your property. In Rockingham's rainy winters, blocked gutters can cause serious water damage to your home.",
       "Gutter cleaning extends the life of your gutters and downpipes, reduces potential for structural water damage, and eliminates breeding areas for insects, especially mosquitoes. Regular gutter cleaning services are essential for maintaining the safety and integrity of your home.",
@@ -41,10 +42,35 @@ const servicesData: Record<string, {
       "Clean up all debris from your property"
     ]
   },
+  "gutter-guards": {
+    title: "Gutter Guards",
+    subtitle: "Gutter Guard Supply & Installation in Rockingham",
+    image: "/Photos/new_photos/gutter_guards_new.jpg",
+    description: [
+      "Leaves, twigs, seed pods and debris land in your gutters all year round. Over time they cause blockages, overflowing water, rust and damage to your fascia, ceilings and foundations. With so many trees around Rockingham and the coast, gutters can fill up fast.",
+      "Gutter guards are a mesh barrier fitted over your gutters that lets water through while keeping most debris out. They keep your gutters flowing, stop birds and pests from nesting, and reduce the risk of dry leaves building up on your roof during bushfire season.",
+      "At JH Shoreline, we clean your gutters first, then supply and install quality gutter guard mesh tailored to your roof type. The result is cleaner gutters, far fewer gutter cleans, and real peace of mind through every season."
+    ],
+    benefits: [
+      "Keep leaves and debris out of gutters",
+      "Reduce blockages and overflow",
+      "Far fewer gutter cleans needed",
+      "Stop birds and pests nesting",
+      "Reduce bushfire risk from dry debris",
+      "Protect your fascia and foundations"
+    ],
+    process: [
+      "Inspect your roof and gutters",
+      "Clean gutters and flush downpipes",
+      "Measure and cut mesh to suit your roof",
+      "Securely install gutter guards",
+      "Final check and clean up of your property"
+    ]
+  },
   "solar-panel-cleaning": {
     title: "Solar Panel Cleaning",
     subtitle: "Maximize Your Solar Energy Efficiency",
-    image: "/Photos/solar_pannel_cleaning_2 (2).png",
+    image: "/Photos/new_photos/solar_panel_new.jpg",
     description: [
       "WA has plenty of sunny days to produce solar power, but this is wasted if your solar panels aren't operating at their maximum potential. When dirt and grime build up on your solar panels, they can block the sun's rays and prevent the panels from absorbing energy efficiently.",
       "Studies show that dirty solar panels can lose up to 25% of their efficiency. Regular cleaning ensures you're getting the maximum return on your solar investment and reducing your electricity bills.",
@@ -66,10 +92,35 @@ const servicesData: Record<string, {
       "Provide efficiency report"
     ]
   },
+  "solar-bird-proofing": {
+    title: "Solar Bird Proofing",
+    subtitle: "Protect Your Solar Panels from Nesting Birds",
+    image: "/Photos/new_photos/solar_bird_proofing_new.jpg",
+    description: [
+      "The sheltered gap under solar panels is a perfect nesting spot for pigeons and other birds. Once they move in, nests, droppings and debris build up fast, leading to noise, mess and an unhealthy environment around your home.",
+      "Bird nests and droppings can damage cabling, block roof drainage, stain your panels and reduce their output. Bird droppings are also acidic and can cause long-term damage to your panels and roof if left untreated.",
+      "At JH Shoreline, we remove existing nests and debris, clean the area, then install durable, UV-resistant mesh around the edges of your solar array. The mesh is clipped securely in place without drilling into your panels, keeping birds out for good while protecting your panels and warranty."
+    ],
+    benefits: [
+      "Stop birds nesting under panels",
+      "Protect wiring and cabling",
+      "Keep panels producing at full power",
+      "No drilling into your panels",
+      "Reduce noise and mess",
+      "Long-lasting, UV-resistant mesh"
+    ],
+    process: [
+      "Inspect panels and roof for bird activity",
+      "Remove nests, droppings and debris",
+      "Clean panels and the area underneath",
+      "Install bird-proof mesh around the array",
+      "Final inspection and clean up"
+    ]
+  },
   "windows-cleaning": {
     title: "Windows Cleaning",
     subtitle: "Crystal Clear Windows for Ground & First Floor",
-    image: "/Photos/windows_cleaning_5.png",
+    image: "/Photos/new_photos/window_cleaning_new.png",
     description: [
       "Clean windows transform the appearance of your property and allow natural light to brighten your space. Perfect for ground floor and first floor residential properties.",
       "Our professional window cleaning service delivers crystal-clear, streak-free results. We use specialized equipment and eco-friendly cleaning solutions to ensure your windows sparkle.",
@@ -94,7 +145,7 @@ const servicesData: Record<string, {
   "windows-cleaning-high-reach": {
     title: "High Reach Windows Cleaning",
     subtitle: "Professional Multi-Story Window Cleaning",
-    image: "/Photos/high_reach_windows_3.png",
+    image: "/Photos/new_photos/high_Reach_new.png",
     description: [
       "Multi-story buildings and hard-to-reach windows require specialized equipment and expertise to clean safely and effectively. Our high-reach window cleaning service handles windows that standard methods cannot reach.",
       "Using professional-grade extension poles, water-fed systems, and safety equipment, we deliver the same crystal-clear, streak-free results for upper floors and difficult access areas.",
@@ -119,7 +170,8 @@ const servicesData: Record<string, {
   "end-of-lease-cleaning": {
     title: "End of Lease Cleaning",
     subtitle: "Get Your Full Bond Back Guaranteed",
-    image: "/Photos/end_of_lease cleaning.png",
+    image: "/Photos/new_photos/end_of_lease_new.png",
+    collage: "/Photos/new_photos/Vacate_Collage.png",
     description: [
       "Moving out? Our comprehensive end of lease cleaning service ensures your rental property is spotless and ready for inspection. We follow real estate and property manager checklists to guarantee you get your full bond back.",
       "Our thorough cleaning covers every room, including kitchens, bathrooms, bedrooms, living areas, and all fixtures and fittings. We pay attention to the details that property managers look for during final inspections.",
@@ -145,7 +197,8 @@ const servicesData: Record<string, {
   "carpet-cleaning": {
     title: "Carpet Cleaning",
     subtitle: "Professional Deep Carpet Cleaning",
-    image: "/Photos/carpet_cleaning_2.png",
+    image: "/Photos/new_photos/carpet_new.png",
+    collage: "/Photos/new_photos/Carpet_Cleaning_Collage.png",
     description: [
       "Over time, carpets accumulate dirt, dust, allergens, and stains that regular vacuuming can't remove. Our professional carpet cleaning service uses hot water extraction to deep clean your carpets and restore them to like-new condition.",
       "We remove stubborn stains, eliminate odors, and extract allergens that can affect your family's health. Our eco-friendly cleaning solutions are safe for children and pets while being tough on dirt and grime.",
@@ -171,7 +224,7 @@ const servicesData: Record<string, {
   "oven-cleaning": {
     title: "Oven Cleaning",
     subtitle: "Professional Oven Deep Cleaning",
-    image: "/Photos/oven_cleaning.png",
+    image: "/Photos/new_photos/oven_new.png",
     description: [
       "A dirty oven isn't just unsightly – it can affect the taste of your food, create smoke and odors, and even become a fire hazard. Our professional oven cleaning service removes all grease, grime, and burnt-on food to restore your oven to sparkling condition.",
       "We use safe, eco-friendly cleaning products that are tough on grease but gentle on your oven's surfaces. Our thorough cleaning includes the oven interior, door glass, racks, trays, and all removable parts.",
@@ -197,7 +250,8 @@ const servicesData: Record<string, {
   "high-pressure-cleaning": {
     title: "High Pressure Cleaning",
     subtitle: "Professional Pressure Washing Services",
-    image: "/Photos/high_pressure_3.png",
+    image: "/Photos/new_photos/High_PRessure_new.png",
+    collage: "/Photos/new_photos/High_Pressure_Collage_fixed.png",
     description: [
       "Over time, outdoor surfaces accumulate dirt, grime, mold, algae, and stains that regular cleaning can't remove. Our professional high pressure cleaning service restores driveways, patios, decks, and exterior walls to their original condition.",
       "Using commercial-grade pressure washing equipment, we safely and effectively remove years of buildup without damaging your surfaces. We adjust pressure levels for different materials to ensure the best results.",
@@ -281,6 +335,22 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
                   </p>
                 ))}
               </div>
+
+              {service.collage && (
+                <div className="mt-12">
+                  <h2 className="text-2xl font-bold text-[#0a1628] mb-6">Our Work</h2>
+                  <div className="rounded-2xl overflow-hidden shadow-xl">
+                    <Image
+                      src={service.collage}
+                      alt={`${service.title} by JH Shoreline`}
+                      width={1536}
+                      height={1024}
+                      sizes="(min-width: 1024px) 66vw, 100vw"
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
+              )}
 
               {/* Benefits */}
               <div className="mt-12">

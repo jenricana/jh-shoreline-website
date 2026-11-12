@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles, Sun, Wrench, Building2, Home, Brush, Flame, Waves } from "lucide-react";
+import { Sparkles, Sun, Wrench, Building2, Home, Brush, Flame, Waves, ShieldCheck, Bird } from "lucide-react";
 import Image from "next/image";
 
 const services = [
@@ -10,7 +10,15 @@ const services = [
     icon: Wrench,
     title: "Gutter\nCleaning",
     description: "Remove leaves, debris and blockages to prevent water damage and keep gutters flowing freely.",
-    image: "/Photos/gutter_cleaning.png"
+    image: "/Photos/new_photos/gutter_cleaning_new.png"
+  },
+  {
+    id: "gutter-guards",
+    slug: "gutter-guards",
+    icon: ShieldCheck,
+    title: "Gutter\nGuards",
+    description: "Gutter guard mesh installed to keep leaves and debris out, reduce blockages and cut down on gutter cleans.",
+    image: "/Photos/new_photos/gutter_guards_new.jpg"
   },
   {
     id: "solar",
@@ -18,7 +26,15 @@ const services = [
     icon: Sun,
     title: "Solar Panel\nCleaning",
     description: "Maximize energy efficiency with professional solar panel cleaning for optimal performance.",
-    image: "/Photos/solar_pannel_cleaning_2 (2).png"
+    image: "/Photos/new_photos/solar_panel_new.jpg"
+  },
+  {
+    id: "solar-bird-proofing",
+    slug: "solar-bird-proofing",
+    icon: Bird,
+    title: "Solar Bird\nProofing",
+    description: "Stop pigeons and birds nesting under your solar panels with durable mesh that protects panels, wiring and roof.",
+    image: "/Photos/new_photos/solar_bird_proofing_new.jpg"
   },
   {
     id: "windows",
@@ -26,7 +42,7 @@ const services = [
     icon: Sparkles,
     title: "Windows\nCleaning",
     description: "Crystal clear windows for ground floor and first floor residential properties with streak-free results.",
-    image: "/Photos/windows_cleaning_5.png"
+    image: "/Photos/new_photos/window_cleaning_new.png"
   },
   {
     id: "windows-high",
@@ -34,7 +50,7 @@ const services = [
     icon: Building2,
     title: "High Reach\nWindows",
     description: "Professional window cleaning for multi-story buildings and hard-to-reach windows with specialized equipment.",
-    image: "/Photos/high_reach_windows_3.png"
+    image: "/Photos/new_photos/high_Reach_new.png"
   },
   {
     id: "end-of-lease",
@@ -42,7 +58,7 @@ const services = [
     icon: Home,
     title: "End of Lease\nCleaning",
     description: "Comprehensive bond cleaning to ensure you get your full deposit back. We cover every detail.",
-    image: "/Photos/end_of_lease_cleaning_solo.png"
+    image: "/Photos/new_photos/end_of_lease_new.png"
   },
   {
     id: "carpet",
@@ -50,7 +66,7 @@ const services = [
     icon: Brush,
     title: "Carpet\nCleaning",
     description: "Deep carpet cleaning to remove stains, odors, and allergens. Restore your carpets to like-new condition.",
-    image: "/Photos/carpet_1.png"
+    image: "/Photos/new_photos/carpet_new.png"
   },
   {
     id: "oven",
@@ -58,7 +74,7 @@ const services = [
     icon: Flame,
     title: "Oven\nCleaning",
     description: "Professional oven cleaning to remove grease, grime, and burnt-on food. Safe and eco-friendly products.",
-    image: "/Photos/oven_cleaning_3.png"
+    image: "/Photos/new_photos/oven_new.png"
   },
   {
     id: "high-pressure",
@@ -66,7 +82,7 @@ const services = [
     icon: Waves,
     title: "High Pressure\nCleaning",
     description: "Powerful pressure washing for driveways, patios, decks, and exterior surfaces. Restore your outdoor areas.",
-    image: "/Photos/high_pressure_1.png"
+    image: "/Photos/new_photos/High_PRessure_new.png"
   }
 ];
 

@@ -266,7 +266,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Photos/solar_pannel_cleaning_2 (2).png"
+                  src="/Photos/new_photos/solar_panel_new.jpg"
                   alt="Our Mission"
                   width={600}
                   height={400}

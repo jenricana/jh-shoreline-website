@@ -7,7 +7,9 @@ import Link from "next/link";
 
 const serviceLinks = [
   { name: "Gutter Cleaning", href: "/services/gutter-cleaning" },
+  { name: "Gutter Guards", href: "/services/gutter-guards" },
   { name: "Solar Panel Cleaning", href: "/services/solar-panel-cleaning" },
+  { name: "Solar Bird Proofing", href: "/services/solar-bird-proofing" },
   { name: "Windows Cleaning", href: "/services/windows-cleaning" },
   { name: "High Reach Windows", href: "/services/windows-cleaning-high-reach" },
   { name: "End of Lease Cleaning", href: "/services/end-of-lease-cleaning" },
@@ -79,7 +81,7 @@ export function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center gap-3">
               <Image 
-                src="/Photos/jh-shoreline-logo-v2.png" 
+                src="/Photos/jh-shoreline-logo-v4.png" 
                 alt="JH Shoreline Cleaning Services" 
                 width={60} 
                 height={60}

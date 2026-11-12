@@ -26,9 +26,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: '/Photos/jh-shoreline-logo-v2.png',
-        width: 1024,
-        height: 1024,
+        url: '/Photos/jh-shoreline-logo-v4.png',
+        width: 1000,
+        height: 1000,
         alt: 'JH Shoreline Cleaning Services',
       },
     ],
@@ -39,8 +39,8 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'LocalBusiness',
   name: 'JH Shoreline Cleaning Services',
-  image: 'https://www.jhshoreline.com.au/Photos/jh-shoreline-logo-v2.png',
-  logo: 'https://www.jhshoreline.com.au/Photos/jh-shoreline-logo-v2.png',
+  image: 'https://www.jhshoreline.com.au/Photos/jh-shoreline-logo-v4.png',
+  logo: 'https://www.jhshoreline.com.au/Photos/jh-shoreline-logo-v4.png',
   '@id': 'https://www.jhshoreline.com.au',
   url: 'https://www.jhshoreline.com.au',
   telephone: '+61413213689',
@@ -70,7 +70,7 @@ const jsonLd = {
   ],
   priceRange: '$$',
   areaServed: ['Rockingham', 'Warnbro', 'Safety Bay', 'Baldivis', 'Port Kennedy', 'Secret Harbour'],
-  serviceType: ['Window Cleaning', 'Gutter Cleaning', 'Solar Panel Cleaning', 'High Pressure Cleaning', 'Carpet Cleaning', 'Oven Cleaning', 'End of Lease Cleaning'],
+  serviceType: ['Window Cleaning', 'Gutter Cleaning', 'Gutter Guards', 'Solar Panel Cleaning', 'Solar Bird Proofing', 'High Pressure Cleaning', 'Carpet Cleaning', 'Oven Cleaning', 'End of Lease Cleaning'],
 };
 
 const siteLinksSearchBox = {

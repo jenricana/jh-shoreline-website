@@ -94,7 +94,7 @@ export default function DVAPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Photos/gutter_cleaning_3.png"
+                  src="/Photos/new_photos/gutter_cleaning_new.png"
                   alt="DVA Cleaning Services"
                   width={700}
                   height={500}
@@ -176,7 +176,7 @@ export default function DVAPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Photos/windows_cleaning_5.png"
+                  src="/Photos/new_photos/window_cleaning_new.png"
                   alt="DVA Services"
                   width={600}
                   height={450}

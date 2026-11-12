@@ -110,7 +110,7 @@ export default function NDISPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Photos/solar_pannel_cleaning_2 (2).png"
+                  src="/Photos/new_photos/solar_panel_new.jpg"
                   alt="NDIS Cleaning Services"
                   width={700}
                   height={500}
@@ -197,7 +197,7 @@ export default function NDISPage() {
             <div className="relative order-2 lg:order-1">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Photos/carpet_1.png"
+                  src="/Photos/new_photos/carpet_new.png"
                   alt="NDIS Services"
                   width={600}
                   height={450}

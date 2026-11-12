@@ -8,7 +8,9 @@ import Image from "next/image";
 
 const services = [
   "Gutter Cleaning",
+  "Gutter Guards",
   "Solar Panel Cleaning",
+  "Solar Bird Proofing",
   "Windows Cleaning",
   "High Reach Windows",
   "End of Lease Cleaning",

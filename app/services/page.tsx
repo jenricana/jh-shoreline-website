@@ -5,30 +5,46 @@ import { Footer } from "@/components/layout/footer";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import { Droplets, Sun, Sparkles, Building2, Home, Brush, Flame, Waves } from "lucide-react";
+import { Droplets, Sun, Sparkles, Building2, Home, Brush, Flame, Waves, ShieldCheck, Bird } from "lucide-react";
 
 const services = [
   {
     id: "gutter-cleaning",
     title: "Gutter Cleaning",
     description: "Professional gutter cleaning to prevent water damage and maintain your property. We remove leaves, debris, and blockages to ensure proper drainage.",
-    image: "/Photos/gutter_cleaning.png",
+    image: "/Photos/new_photos/gutter_cleaning_new.png",
     icon: Droplets,
     features: ["Debris removal", "Downpipe clearing", "Gutter inspection", "Before/after photos"]
+  },
+  {
+    id: "gutter-guards",
+    title: "Gutter Guards",
+    description: "Supply and installation of gutter guard mesh to keep leaves and debris out. Fewer blockages, less overflow and far fewer gutter cleans.",
+    image: "/Photos/new_photos/gutter_guards_new.jpg",
+    icon: ShieldCheck,
+    features: ["Leaf & debris protection", "Keeps birds & pests out", "Fewer gutter cleans", "Tailored to your roof"]
   },
   {
     id: "solar-panel-cleaning",
     title: "Solar Panel Cleaning",
     description: "Maximize your solar panel efficiency with our professional cleaning service. Dirty panels can lose up to 25% of their energy output.",
-    image: "/Photos/solar_pannel_cleaning_2 (2).png",
+    image: "/Photos/new_photos/solar_panel_new.jpg",
     icon: Sun,
     features: ["Increased efficiency", "Soft wash technique", "No harsh chemicals", "Regular maintenance plans"]
+  },
+  {
+    id: "solar-bird-proofing",
+    title: "Solar Bird Proofing",
+    description: "Stop pigeons and birds nesting under your solar panels. We install durable mesh barriers that protect your panels, wiring and roof.",
+    image: "/Photos/new_photos/solar_bird_proofing_new.jpg",
+    icon: Bird,
+    features: ["Stops birds nesting", "Protects wiring", "No drilling into panels", "Nest & debris removal"]
   },
   {
     id: "windows-cleaning",
     title: "Windows Cleaning",
     description: "Professional window cleaning for crystal-clear, streak-free results. Perfect for ground floor and first floor residential properties.",
-    image: "/Photos/windows_cleaning_5.png",
+    image: "/Photos/new_photos/window_cleaning_new.png",
     icon: Sparkles,
     features: ["Ground floor windows", "First floor access", "Streak-free finish", "Inside & outside"]
   },
@@ -36,7 +52,7 @@ const services = [
     id: "windows-cleaning-high-reach",
     title: "High Reach Windows",
     description: "Specialized window cleaning for multi-story buildings and hard-to-reach windows using professional equipment.",
-    image: "/Photos/high_reach_windows_3.png",
+    image: "/Photos/new_photos/high_Reach_new.png",
     icon: Building2,
     features: ["Multi-story buildings", "Commercial properties", "Specialized equipment", "Safety certified"]
   },
@@ -44,7 +60,7 @@ const services = [
     id: "end-of-lease-cleaning",
     title: "End of Lease Cleaning",
     description: "Comprehensive bond cleaning service to ensure you get your full deposit back. We cover every room and detail required by property managers.",
-    image: "/Photos/end_of_lease cleaning.png",
+    image: "/Photos/new_photos/end_of_lease_new.png",
     icon: Home,
     features: ["Full property clean", "Bond back guarantee", "Checklist provided", "All rooms included"]
   },
@@ -52,7 +68,7 @@ const services = [
     id: "carpet-cleaning",
     title: "Carpet Cleaning",
     description: "Deep carpet cleaning to remove stains, odors, and allergens. Our professional equipment restores your carpets to like-new condition.",
-    image: "/Photos/carpet_cleaning_2.png",
+    image: "/Photos/new_photos/carpet_new.png",
     icon: Brush,
     features: ["Deep extraction", "Stain removal", "Odor elimination", "Quick drying"]
   },
@@ -60,7 +76,7 @@ const services = [
     id: "oven-cleaning",
     title: "Oven Cleaning",
     description: "Professional oven cleaning to remove grease, grime, and burnt-on food. We use safe, eco-friendly products for a sparkling clean oven.",
-    image: "/Photos/oven_cleaning.png",
+    image: "/Photos/new_photos/oven_new.png",
     icon: Flame,
     features: ["Deep degreasing", "Eco-friendly products", "Racks included", "Same day service"]
   },
@@ -68,7 +84,7 @@ const services = [
     id: "high-pressure-cleaning",
     title: "High Pressure Cleaning",
     description: "Powerful pressure washing to restore driveways, patios, decks, and exterior surfaces. Remove dirt, grime, mold, and stains.",
-    image: "/Photos/high_pressure_3.png",
+    image: "/Photos/new_photos/High_PRessure_new.png",
     icon: Waves,
     features: ["Driveways & paths", "Patios & decks", "Exterior walls", "Oil stain removal"]
   }

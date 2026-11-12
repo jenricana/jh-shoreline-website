@@ -30,7 +30,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-2 mb-4">
               <Image 
-                src="/Photos/jh-shoreline-logo-v2.png" 
+                src="/Photos/jh-shoreline-logo-v4.png" 
                 alt="JH Shoreline" 
                 width={45} 
                 height={45}
@@ -74,7 +74,9 @@ export function Footer() {
             <h4 className="font-bold mb-6 text-white text-xl">Our Services</h4>
             <ul className="space-y-3.5 text-base">
               <li><a href="/services/gutter-cleaning" className="text-gray-300 hover:text-[#FFC107] transition-colors">Gutter Cleaning</a></li>
+              <li><a href="/services/gutter-guards" className="text-gray-300 hover:text-[#FFC107] transition-colors">Gutter Guards</a></li>
               <li><a href="/services/solar-panel-cleaning" className="text-gray-300 hover:text-[#FFC107] transition-colors">Solar Panel Cleaning</a></li>
+              <li><a href="/services/solar-bird-proofing" className="text-gray-300 hover:text-[#FFC107] transition-colors">Solar Bird Proofing</a></li>
               <li><a href="/services/windows-cleaning" className="text-gray-300 hover:text-[#FFC107] transition-colors">Windows Cleaning</a></li>
               <li><a href="/services/windows-cleaning-high-reach" className="text-gray-300 hover:text-[#FFC107] transition-colors">High Reach Windows</a></li>
             </ul>

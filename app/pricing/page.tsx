@@ -133,7 +133,7 @@ export default function PricingLandingPage() {
               {/* Left - Image & Offer */}
               <div className="relative hidden md:block">
                 <Image
-                  src="/Photos/solar_pannel_cleaning_2 (2).png"
+                  src="/Photos/new_photos/solar_panel_new.jpg"
                   alt="Professional Cleaning"
                   fill
                   className="object-cover rounded-l-3xl"
@@ -225,7 +225,9 @@ export default function PricingLandingPage() {
                       <option value="">Select Service *</option>
                       <option value="Window Cleaning">Window Cleaning</option>
                       <option value="Gutter Cleaning">Gutter Cleaning</option>
+                      <option value="Gutter Guards">Gutter Guards</option>
                       <option value="Solar Panel Cleaning">Solar Panel Cleaning</option>
+                      <option value="Solar Bird Proofing">Solar Bird Proofing</option>
                       <option value="High Reach Windows">High Reach Windows</option>
                       <option value="End of Lease Cleaning">End of Lease Cleaning</option>
                       <option value="Carpet Cleaning">Carpet Cleaning</option>
@@ -350,7 +352,7 @@ export default function PricingLandingPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Photos/windows_cleaning_5.png"
+                  src="/Photos/new_photos/window_cleaning_new.png"
                   alt="Window Cleaning"
                   width={600}
                   height={450}
@@ -370,7 +372,7 @@ export default function PricingLandingPage() {
             <div className="order-2 lg:order-1 relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Photos/gutter_cleaning.png"
+                  src="/Photos/new_photos/gutter_cleaning_new.png"
                   alt="Gutter Cleaning"
                   width={600}
                   height={450}
@@ -450,7 +452,7 @@ export default function PricingLandingPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Photos/solar_pannel_cleaning_2 (2).png"
+                  src="/Photos/new_photos/solar_panel_new.jpg"
                   alt="Solar Panel Cleaning"
                   width={600}
                   height={450}
@@ -507,7 +509,7 @@ export default function PricingLandingPage() {
             <div className="relative order-2 lg:order-1">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Photos/high_reach_windows_3.png"
+                  src="/Photos/new_photos/high_Reach_new.png"
                   alt="High Reach Window Cleaning"
                   width={600}
                   height={450}
@@ -588,7 +590,7 @@ export default function PricingLandingPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Photos/end_of_lease_cleaning_solo.png"
+                  src="/Photos/new_photos/end_of_lease_new.png"
                   alt="End of Lease Cleaning"
                   width={600}
                   height={450}
@@ -608,7 +610,7 @@ export default function PricingLandingPage() {
             <div className="order-2 lg:order-1 relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Photos/carpet_1.png"
+                  src="/Photos/new_photos/carpet_new.png"
                   alt="Carpet Cleaning"
                   width={600}
                   height={450}
@@ -690,7 +692,7 @@ export default function PricingLandingPage() {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Photos/oven_cleaning_3.png"
+                  src="/Photos/new_photos/oven_new.png"
                   alt="Oven Cleaning"
                   width={600}
                   height={450}
@@ -710,7 +712,7 @@ export default function PricingLandingPage() {
             <div className="order-2 lg:order-1 relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <Image
-                  src="/Photos/high_pressure_1.png"
+                  src="/Photos/new_photos/High_PRessure_new.png"
                   alt="High Pressure Cleaning"
                   width={600}
                   height={450}
