@@ -49,11 +49,11 @@ export function TestimonialsSection() {
           <div className="relative">
             <div className="relative rounded-3xl overflow-hidden">
               <Image
-                src="/Photos/JH.png"
+                src="/Photos/jh-founder.jpg"
                 alt="JH Shoreline Team"
-                width={600}
-                height={700}
-                className="object-cover w-full h-[500px]"
+                width={709}
+                height={1024}
+                className="object-cover object-[center_15%] w-full h-[500px]"
               />
               
               {/* Google Review Badge - Top Left */}
