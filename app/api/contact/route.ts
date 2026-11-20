@@ -7,7 +7,7 @@ export const runtime = 'nodejs';
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { fullName, phone, email, address, buildingType, message, service } = body;
+    const { fullName, phone, email, address, buildingType, message, service, source, sourceDetail, utm_source, utm_medium, utm_campaign, utm_content, utm_term } = body;
 
     // Create transporter using Gmail SMTP
     const transporter = nodemailer.createTransport({
@@ -40,6 +40,19 @@ export async function POST(request: Request) {
               <h3 style="color: #0a1628; margin-bottom: 15px;">Service Details</h3>
               ${service ? `<p><strong>Service Requested:</strong> ${service}</p>` : ''}
               ${buildingType ? `<p><strong>Property Type:</strong> ${buildingType}</p>` : ''}
+            </div>
+          ` : ''}
+
+          ${source || utm_source ? `
+            <div style="margin: 20px 0;">
+              <h3 style="color: #0a1628; margin-bottom: 15px;">Ad / Source Tracking</h3>
+              ${source ? `<p><strong>Source:</strong> ${source}</p>` : ''}
+              ${sourceDetail ? `<p><strong>Source Detail:</strong> ${sourceDetail}</p>` : ''}
+              ${utm_source ? `<p><strong>UTM Source:</strong> ${utm_source}</p>` : ''}
+              ${utm_medium ? `<p><strong>UTM Medium:</strong> ${utm_medium}</p>` : ''}
+              ${utm_campaign ? `<p><strong>UTM Campaign:</strong> ${utm_campaign}</p>` : ''}
+              ${utm_content ? `<p><strong>UTM Content:</strong> ${utm_content}</p>` : ''}
+              ${utm_term ? `<p><strong>UTM Term:</strong> ${utm_term}</p>` : ''}
             </div>
           ` : ''}
 
