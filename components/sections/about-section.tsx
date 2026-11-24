@@ -1,8 +1,8 @@
-import { Home } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { DecorativeIcons } from "@/components/ui/decorative-icons";
-import { CompactQuoteForm } from "@/components/ui/compact-quote-form";
+import { Suspense } from "react";
+import { MultiStepQuoteForm } from "@/components/ui/multi-step-quote-form";
 
 const features = [
   "Professional Service",
@@ -19,54 +19,16 @@ export function AboutSection() {
       <DecorativeIcons />
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto">
-          {/* Top Row - Video & Form Side by Side */}
-          <div className="grid lg:grid-cols-2 gap-8 mb-20">
-            {/* Left - Video Section */}
-            <div className="relative pb-12">
-              {/* Years of Experience Badge */}
-              <div className="absolute -left-4 top-1/4 z-10 bg-white rounded-lg shadow-xl p-4 text-center">
-                <div className="text-[#FFC107] text-4xl font-bold">5+</div>
-                <div className="text-gray-600 text-xs uppercase tracking-wider">
-                  Years<br />of<br />Experience
-                </div>
-                <div className="mt-2 text-[#FFC107]">
-                  <svg className="w-8 h-8 mx-auto" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM9 10H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm-8 4H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2z"/>
-                  </svg>
-                </div>
-              </div>
-
-              {/* Main video */}
-              <div className="relative ml-8 rounded-2xl overflow-hidden shadow-xl">
-                <video
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="object-cover h-[500px] w-full"
-                >
-                  <source src="/Photos/lv_7625425615440678149_20260604192339.mp4" type="video/mp4" />
-                  Your browser does not support the video tag.
-                </video>
-              </div>
-
-              {/* Secondary image */}
-              <div className="absolute -bottom-12 right-0 w-44 h-36 md:w-48 md:h-32 rounded-xl overflow-hidden shadow-xl border-4 border-white">
-                <Image
-                  src="/Photos/about_photo_2.png"
-                  alt="Quality Work"
-                  width={192}
-                  height={128}
-                  className="object-cover h-full w-full"
-                />
-              </div>
+          {/* Quote form */}
+          <div className="max-w-2xl mx-auto mb-20">
+            <div className="text-center mb-6">
+              <h3 className="text-2xl font-bold text-[#0a1628]">Get Your Free Quote</h3>
+              <p className="text-sm text-gray-500 mt-1">Takes 30 seconds. No obligation — we&apos;ll call or text you back within one business day.</p>
             </div>
-
-            {/* Right - Quote Form */}
-            <div className="h-[500px] flex items-stretch">
-              <div className="w-full">
-                <CompactQuoteForm variant="light" />
-              </div>
+            <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-6 md:p-8">
+              <Suspense fallback={null}>
+                <MultiStepQuoteForm source="homepage-about" />
+              </Suspense>
             </div>
           </div>
 

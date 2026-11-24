@@ -10,14 +10,14 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/Photos/gold-marble-bg.jpg"
+          src="/Photos/landingpage-cover-v1.png"
           alt="Shoreline view"
           fill
-          className="object-cover"
+          className="object-cover object-center"
           priority
         />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/60 to-black/45"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/65 to-black/50"></div>
       </div>
 
       {/* Content */}
