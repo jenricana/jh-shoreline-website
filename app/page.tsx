@@ -5,7 +5,7 @@ import { ServicesSection } from "@/components/sections/services-section";
 import { ServicesDetail } from "@/components/sections/services-detail";
 import { RecentProjects } from "@/components/sections/recent-projects";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
-import { ContactSection } from "@/components/sections/contact-section";
+import { MultiStepContactSection } from "@/components/sections/multi-step-contact-section";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 
@@ -21,7 +21,7 @@ export default function Home() {
         <RecentProjects />
         <WorkingProcess />
         <TestimonialsSection />
-        <ContactSection />
+        <MultiStepContactSection />
       </main>
       <Footer />
     </div>
