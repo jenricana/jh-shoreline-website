@@ -17,9 +17,9 @@ export const ALL_SERVICES = [
 ]
 
 const SIZES = [
-  { id: "small",      label: "1–2 Bed",               sub: "Studio, unit or small home",     hint: "from $120" },
-  { id: "medium",     label: "3–4 Bed Single Storey",  sub: "Most common family home",        hint: "from $180" },
-  { id: "large",      label: "Double Storey",           sub: "Two-storey or large property",   hint: "from $300" },
+  { id: "small",      label: "1–2 Bed",               sub: "Studio, unit or small home",     hint: "from $150" },
+  { id: "medium",     label: "3–4 Bed Single Storey",  sub: "Most common family home",        hint: "from $250" },
+  { id: "large",      label: "Double Storey",           sub: "Two-storey or large property",   hint: "from $350" },
   { id: "commercial", label: "Commercial / Strata",     sub: "Office, complex or unit block",  hint: "Custom quote" },
 ]
 
